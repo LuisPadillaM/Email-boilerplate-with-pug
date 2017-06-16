@@ -35,7 +35,76 @@ mixin tdbackground(params)
         </v:textbox>
         </v:rect>
         <![endif]-->
-//- params img, color,width,height, bgcolor, bordercolor, link, radius,font-family,font-size,font-weight, text, send by object literal
+
+//- params bgImage, fallbackColor, width, height
+//- NO WIDTH = full width
+//- no width = table element
+//- width = td element
+mixin tdbackground(params)
+  -var bgColor = `background-color:${params.fallbackColor? params.fallbackColor:"gray"};`
+  -var bgImage = params.bgImage
+  -var tdHeight = params.height ? params.height: "";
+  -var tdWidth = params.width ? params.width: "";
+  -var fullheight = params.height ? "" : "style='mso-fit-shape-to-text:true'"
+  -var height = tdHeight ? `height:${tdHeight}px;` : ""
+  -var tdWidth = params.width ? params.width : "";
+  -var width = tdWidth ? `width:${tdWidth}px;`: "";
+
+  if !width
+    table(cellpadding="0" cellspacing="0" border="0" width="100%")&attributes(tdHeight ? { 'height': tdHeight} : "")
+      tr
+        td(background=`${bgImage}` bgcolor=`${bgColor}` valign="top")
+          <!--[if gte mso 9]>
+          <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="mso-width-percent:1000;#{height}">
+            <v:fill type="tile" src="#{bgImage}" color="#{bgColor}" />
+            <v:textbox !{params.height ? "" : 'style="mso-fit-shape-to-text:true"'} inset="0,0,0,0">
+          <![endif]-->
+          div
+            if block
+              block
+          <!--[if gte mso 9]>
+            </v:textbox>
+          </v:rect>
+          <![endif]-->
+  else
+    td(background=`${bgImage}` bgcolor=`${bgColor}` valign="top")&attributes(tdHeight ? { 'height': tdHeight} : "",  tdWidth ? { 'width': tdWidth} : "")
+      <!--[if gte mso 9]>
+      <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="#{height}#{width}">
+        <v:fill type="tile" src="#{bgImage}" color="#{bgColor}" />
+        <v:textbox !{params.height ? "" : 'style="mso-fit-shape-to-text:true"'} inset="0,0,0,0">
+      <![endif]-->
+      div
+        if block
+          block
+      <!--[if gte mso 9]>
+        </v:textbox>
+      </v:rect>
+      <![endif]-->
+
+
+
+
+//- ADD THIS MIXIN RIGHT AFTER BODY THE OPENING TAG
+//- params fallbackColor, bgImage
+//- +fullbgImage({})  or +fullbgImage({bgImage:"http://google.com", fallbackColor:"#dae7ec"})
+mixin fullbgImage(params)
+  -var bgColor = params.fallbackColor? params.fallbackColor:"gray";
+  -var bgImage = params.bgImage
+
+  div(style=`background-color:${bgColor};`)
+    <!--[if gte mso 9]>
+    <v:background xmlns:v="urn:schemas-microsoft-com:vml" fill="t">
+      <v:fill type="tile" src="#{bgImage}" color="#{bgColor}"/>
+    </v:background>
+    <![endif]-->
+    table(height="100%" width="100%" cellpadding="0" cellspacing="0" border="0")
+      tr
+        td(valign="top" align="left" background=`${bgImage}`)
+          if block
+            block
+
+
+//- params img, color,width,height, bgcolor, bordercolor, link, radius,font-family,font_size,font_weight, text, send by object literal
 //- +button({})  or +button({width:205, height:40, bgcolor:'green', radius:4})
 mixin button(params)
 
