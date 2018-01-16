@@ -30,7 +30,6 @@
   "devDependencies": {
     "@thasmo/gulp-juice": "^0.2.0",
     "babel-core": "^6.26.0",
-    "babel-preset-es2015": "^6.24.1",
     "browser-sync": "^2.18.8",
     "del": "^2.2.2",
     "fs": "0.0.1-security",

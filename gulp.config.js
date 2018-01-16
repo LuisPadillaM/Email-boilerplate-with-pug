@@ -1,6 +1,6 @@
-import gulp from 'gulp';
-import fs from 'fs';
-import path from 'path';
+const gulp = require('gulp');
+const fs = require('fs');
+const path = require('path');
 const $ = require("gulp-load-plugins")({lazy: true});
 
 module.exports = function(args) {

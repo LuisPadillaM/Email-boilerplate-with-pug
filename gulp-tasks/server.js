@@ -1,4 +1,4 @@
-import browserSync from 'browser-sync';
+const browserSync = require('browser-sync');
 const args = require("yargs").argv;
 const {server} = require("../gulp.config")(args);
 

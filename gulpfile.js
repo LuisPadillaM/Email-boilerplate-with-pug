@@ -1,17 +1,16 @@
 'use strict';
 
-import gulp from 'gulp';
-import pug from 'gulp-pug';
-import {reload} from 'browser-sync';
-import fs from 'fs';
-import del from 'del';
-import path from 'path';
+const gulp = require('gulp');
+const {reload} = require('browser-sync');
+const fs = require('fs');
+const del = require('del');
+const path = require('path');
 var juice = require('@thasmo/gulp-juice');
 const $ = require("gulp-load-plugins")({lazy: true});
+const args = require("yargs").argv;
 const config = require("./gulp.config")(args);
 const htmlmin = require('gulp-html-minifier');
 const runSequence = require('run-sequence');
-const args = require("yargs").argv;
 
 const {
   img,
