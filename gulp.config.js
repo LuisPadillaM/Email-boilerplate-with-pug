@@ -1,3 +1,4 @@
+import gulp from 'gulp';
 import fs from 'fs';
 import path from 'path';
 const $ = require("gulp-load-plugins")({lazy: true});
@@ -21,6 +22,17 @@ module.exports = function(args) {
       in: `.${this.email_src}**/img/**/*.{png,gif,jpg}`,
       out: `${this.dest}`
     };
+
+    this.crendentialsPath = "./config.json";
+
+    this.litmus = {
+      in: `${this.dest}/**/*.html`,
+      out: `${this.dest}`
+    }
+
+    this.aws = {
+      in: `${this.dest}**/img/**/*.{png,gif,jpg}`
+    }
 
     this.ftp = (this.remote_d) ? {
             //default title is set to same name as package.json
@@ -47,15 +59,40 @@ module.exports = function(args) {
     };
 
     this.helpers = {
-        changeMsg: function(event){
-            const srcPatter = new RegExp(`/.*(?=${config.src.replace("/\//g", "\/")})/`);
+        changeMsg: (event) => {
+            const srcPatter = new RegExp(`/.*(?=${this.src.replace("/\//g", "\/")})/`);
             $.util.log(`File ${ $.util.colors.blue(event.path.replace(srcPatter, "")) }  ${ event.type }`);
         },
-        getFolders: function(dirname){
+
+        getFolders: (dirname) => {
           return fs.readdirSync(dirname)
           .filter(function(file) {
               return fs.statSync(path.join(dirname, file)).isDirectory();
           });
+        },
+
+        loadFile: (path) => {
+
+          let file = null;
+
+          if(fs.existsSync(path)){
+            file = JSON.parse(fs.readFileSync(path));
+          }
+
+          return file;
+        },
+
+        loadCredentials: (path) => {
+
+          let configFile = this.helpers.loadFile(this.crendentialsPath);
+
+          if(configFile){
+            $.util.log($.util.colors.green("Credentails file was loaded"));
+          }else{
+            $.util.log($.util.colors.yellow("No credentails file was found"));
+          }
+
+          return configFile;
         }
     }
   }
