@@ -1,16 +1,13 @@
-const juice = require('@thasmo/gulp-juice');
-const args = require("yargs").argv;
-const {email_src, zip_path, helpers} = require("../gulp.config")(args);
+const juice = require("@thasmo/gulp-juice");
 
-module.exports = function (gulp, $) {
-  return () => {
-    return gulp.src("dist/**/index.html")
+module.exports = ({ gulp, config }) => {
+  const { dest } = config;
+  gulp.src(`${dest}/**/index.html`)
     .pipe(juice({
-      includeResources:true,
-      removeStyleTags:false,
-      preserveMediaQueries: true,
-      webResources:{ links:true, scripts:false, images:false, relativeTo: "."}
+      includeResources     : true,
+      removeStyleTags      : false,
+      preserveMediaQueries : true,
+      webResources         : { links : true, scripts : false, images : false, relativeTo : "."},
     }))
-    .pipe(gulp.dest("dist"))
-  }
+    .pipe(gulp.dest(dest));
 };

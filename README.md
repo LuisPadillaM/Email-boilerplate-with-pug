@@ -10,19 +10,57 @@ Email boilerplate developed with pug that takes advantage of inheritance, variab
 Install dependencies and start the server.
 
 ```sh
-$ npm install
-$ npm start
+$ yarn install
+$ yarn start
 ```
 
 ### Steps to create new email
  
- - Create new folder inside src/emails with project name
- - Create the index.pug file and extend from desired layout.
- - Create your img, styles, and components folders
- - You can optionally create a data.json to store your data
+ - Enter in CLI : yarn run new --name projectname
  
 ----------
 
+### Email Data
+There is a data.json, in every email folder
+Example of the data.JSON
+```javascript	
+{
+  "header": {
+    "title": "Title",
+    "button":"contribute"
+  },
+  "content":{
+    "title": "Tell Us What You Think in 5 Minutes or Less"
+  },
+  "social_icons": [
+      {
+        "img": "icon-facebook.png",
+        "url": "#",
+        "width": "35",
+        "height": "29"
+      },
+      {
+        "img": "icon-twitter.png",
+        "url": "#",
+        "width": "35",
+        "height": "29"
+      },
+      {
+        "img": "icon-instagram.png",
+        "url": "#",
+        "width": "35",
+        "height": "29"
+      }
+    ],
+}
+
+```
+
+Then in your email you could access them, for example the header title:
+```
+ !{header.title}
+ ```
+ ---
 
 ### Reuse Reset Attributes
 
@@ -120,10 +158,15 @@ The gulpfile.babel.js file provides different task commands using your commandli
 them under zip folder in dist location
 
 
+### Unit Testing
+
+ ```sh
+$ yarn test
+```
 ----------
 
 ### The final build
 Run next instruction and find your build inside dist folder.
  ```sh
-$ npm run build
+$ yarn run build
 ```

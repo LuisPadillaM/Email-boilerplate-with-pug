@@ -1,103 +1,63 @@
-'use strict';
-
-const gulp = require('gulp');
-const {reload} = require('browser-sync');
-const fs = require('fs');
-const del = require('del');
-const path = require('path');
-var juice = require('@thasmo/gulp-juice');
-const $ = require("gulp-load-plugins")({lazy: true});
+const gulp = require("gulp");
+const  { reload } = require("browser-sync");
+const del = require("del");
+const $ = require("gulp-load-plugins")({
+  rename : {
+    "gulp-html-minifier" : "htmlmin",
+    "gulp-js-escape"     : "htmlscape",
+  },
+  lazy : true,
+});
 const args = require("yargs").argv;
 const config = require("./gulp.config")(args);
-const htmlmin = require('gulp-html-minifier');
-const runSequence = require('run-sequence');
-
-const {
-  img,
-  aws,
-  email_src,
-  litmus,
-  helpers,
-  index,
-  dest
-} = config;
+const runSequence = require("run-sequence");
+const { helpers, dest } = config;
 
 const CONFIG = helpers.loadCredentials();
 
-function loadTask(module)  {
-  require(`./gulp-tasks/${module}`)(gulp, $)
-};
+function loadTask (module)  {
+  require(`./gulp-tasks/${module}`)({gulp, $, args, config, reload });
+}
 
-gulp.task("images", loadTask("images"));
+gulp.task("boilerplate", () => loadTask("boilerplate"));
 
-// Post images to AWS S3 so they are accessible to Litmus and manual test
-gulp.task('uploadAWS',()=> {
+gulp.task("images", () => loadTask("images"));
 
-  const publisher = !!CONFIG.aws ? $.awspublish.create(CONFIG.aws) : $.awspublish.create();
-  const headers = {
-    'Cache-Control': 'max-age=315360000, no-transform, public'
-  };
+// // Post images to AWS S3 so they are accessible to Litmus and manual test
+// Gulp.task("uploadAWS", loadTask("awsUpload"));
+//
+//
+// // Send email to Litmus for testing.
+// Gulp.task("litmus", loadTask("litmus"));
 
-  return gulp.src(aws.in)
-    .pipe(publisher.publish(headers))
-    .pipe($.awspublish.reporter());
+// Escape HTML
+gulp.task("htmlScape", () => loadTask("htmlScape"));
+
+
+gulp.task("index", () => loadTask("index"));
+
+gulp.task("pug", () => loadTask("pug"));
+
+gulp.task("inline", ["pug"], () => loadTask("inline"));
+
+gulp.task("deploy", () => loadTask("htmlMin"));
+
+gulp.task("clean", (cb) =>{
+  del.sync([dest], cb);
 });
 
-// Send email to Litmus for testing.
-gulp.task('litmus',()=> {
-  return gulp.src(litmus.in)
-    .pipe($.litmus(CONFIG.litmus))
-    .pipe(gulp.dest(litmus.out));
-});
+gulp.task("server", () => loadTask("server"));
 
-gulp.task('index',loadTask("index"));
+gulp.task("lint-css", () => loadTask("stylelint"));
 
-gulp.task('inline',['pug'], loadTask("inline"));
+// Gulp.task("ftp", ["deploy"], loadTask("ftp"));
 
-gulp.task("pug", loadTask("pug"));
+gulp.task("zip", ["deploy"], () => loadTask("zip"));
 
-gulp.task('clean',(cb)=>{
-     del.sync([dest],cb);
-})
 
-gulp.task("watch", () => {
-  gulp.watch([index,`.${email_src}**/*.pug`],['index'])
-  .on("change", (event) => {
-      helpers.changeMsg(event);
-  });
-  gulp.watch(['src/includes/*','src/layout/*.pug',`.${email_src}**/*.pug`, `.${email_src}**/data.json`],['pug'])
-  .on("change", (event) => {
-      helpers.changeMsg(event);
-  });
-  gulp.watch(`.${email_src}**/img/*`,{cwd:'./'},['images'])
-  .on("change", (event) => {
-    reload()
-  })
-  gulp.watch(`.${email_src}**/styles/*.{css,scss}`,['pug'])
-    .on("change", (event) => {
-      helpers.changeMsg(event);
-  })
-});
+gulp.task("build", ["clean", "images", "pug"]);
 
-gulp.task('server', loadTask("server"));
-
-gulp.task('lint-css', loadTask("stylelint"));
-
-gulp.task('ftp', ["deploy"], loadTask("ftp"));
-
-gulp.task('zip', ["deploy"], loadTask("zip"));
-
-gulp.task('deploy', () => {
-  return gulp.src("dist/**/index.html")
-    .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe($.htmlhint({htmlhintrc: ".htmlhintrc"}))
-    .pipe($.htmlhint.reporter())
-    .pipe(gulp.dest(dest))
-});
-
-gulp.task('build',['clean','index','images','pug']);
-
-gulp.task('default', () =>{
-    runSequence('index','images','pug','server','watch');
-    $.util.log($.util.colors.green("Project Start"));
+gulp.task("default", () => {
+  runSequence("index", "images", "pug", "server");
+  $.util.log($.util.colors.green("Project Start"));
 });

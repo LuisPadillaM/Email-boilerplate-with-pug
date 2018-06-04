@@ -5,12 +5,15 @@
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "new": "gulp boilerplate",
     "start": "gulp",
     "build": "gulp build"
   },
   "keywords": [
     "sass",
     "pug",
+    "jest",
+    "ses",
     "jade",
     "emails",
     "gulp"
@@ -48,6 +51,7 @@
     "gulp-stylelint": "^3.9.0",
     "gulp-util": "^3.0.8",
     "gulp-zip": "^4.0.0",
+    "jest": "^23.1.0",
     "jstransformer-clean-css": "^2.0.0",
     "jstransformer-scss": "^0.1.4",
     "pug-lint": "^2.4.0",
@@ -58,5 +62,9 @@
     "yargs": "^7.0.2"
   },
   "engine": "node >= 6.4.0",
-  "dependencies": {}
+  "dependencies": {
+    "babel-eslint": "^8.2.3",
+    "eslint": "^4.19.1",
+    "gulp-js-escape": "^1.0.1"
+  }
 }

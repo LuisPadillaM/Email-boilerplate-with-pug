@@ -1,28 +1,25 @@
-const juice = require('@thasmo/gulp-juice');
-const args = require("yargs").argv;
-const {email_src, dest} = require("../gulp.config")(args);
+const juice = require("@thasmo/gulp-juice");
+const path = require("path");
+const fs = require("fs");
 
-module.exports = function (gulp, $) {
-  return () => {
-
-    let c_path = "";
-    return gulp.src(`.${email_src}**/index.pug`)
+module.exports =   ({ gulp, $, reload, config }) => {
+  const {emailSrc, dest} = config;
+  let currenPath = "";
+  return gulp.src(`.${emailSrc}**/index.pug`)
     .pipe($.data((file) => {
-      c_path = path.relative(__dirname, path.dirname(file.path));
-      let data = `./${c_path}/data.json`;
-      if(fs.existsSync(data)){
+      currenPath = path.resolve(__dirname, path.dirname(file.path));
+      const data = `${currenPath}/data.json`;
+      if (fs.existsSync(data)) {
         return JSON.parse(fs.readFileSync(data));
       }
     }))
-    .pipe($.pug({basedir: "src"}))
+    .pipe($.pug({basedir : "src"}))
     .pipe(juice({
-      includeResources:true,
-      removeStyleTags:false,
-      preserveMediaQueries: true,
-      webResources:{ links:true, scripts:false, images:false, relativeTo: "."}
+      includeResources     : true,
+      removeStyleTags      : false,
+      preserveMediaQueries : true,
+      webResources         : { links : true, scripts : false, images : false, relativeTo : "."},
     }))
     .pipe(gulp.dest(dest))
-    .pipe(reload({stream: true}))
-
-  }
+    .pipe(reload({stream : true}));
 };
