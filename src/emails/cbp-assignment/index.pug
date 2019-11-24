@@ -1,0 +1,39 @@
+extends ../../layout/main.pug
+
+block variables
+  -var fallback = "Open Sans, Helvetica, Arial, sans-serif"
+  -var preheader = "cbp assignation"
+  -var title = "Email Template"
+  -var white = "#ffffff"
+  -var max_w = 600
+  -var mob = 480
+  -var img_path = "./img/"
+  -var bg_color= "#eeeeee"
+  -var externalFonts = []
+block conditionals
+block styles
+  style(type="text/css")
+    include:scss(outputStyle="compressed") ./styles/inline.scss
+    include:clean-css ./styles/index.css
+
+block content
+  include /includes/modules/preheader.pug
+
+  // CONTAINER TABLE
+  table(width="100%")&attributes(tableAtt)
+    tr
+      td(align="center" style=`background-color: ${bg_color};` bgcolor=bg_color)
+        //  WRAPPER TABLE
+        table(align="center" width=max_w class="mobile-table")&attributes(tableAtt)
+                tr
+                  td(align="center" style="padding: 35px; background-color: #ffffff;" bgcolor=white)
+                    table(align="center" width="100%")&attributes(tableAtt)
+                      tr
+                        td
+                          img(src=img_path+"hero-image-feedback.png" width="120" height="96")
+                      tr
+                        td(class="f_normal" style=`font-family: ${fallback}; font-size: 16px; line-height: 24px; padding-top: 25px; padding-bottom: 15px;`)
+                          h2(style="font-size: 30px; line-height: 36px; color: #333333; margin: 0;").
+                            #{greeting}
+                          p(class="f_normal" style="font-size: 16px; line-height: 24px; color: #777777;").
+                            !{body}
