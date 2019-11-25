@@ -1,4 +1,0 @@
-{
-  "greeting": "{{firstName}},",
-  "body": "You have been assigned to <a href='{{provider.url}}'>{{provider.name}}</a>"
-}

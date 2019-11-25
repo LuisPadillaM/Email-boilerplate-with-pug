@@ -1,0 +1,38 @@
+extends ../../layout/main.pug
+
+block variables
+  -var fallback = "'Nunito', Open Sans, Helvetica, Arial, sans-serif"
+  -var preheader = "cbp assignation"
+  -var title = "Email Template"
+  -var white = "#ffffff"
+  -var max_w = 600
+  -var mob = 480
+  -var img_path = "./img/"
+  -var externalFonts = ["https://fonts.googleapis.com/css?family=Nunito&display=swap"]
+block conditionals
+block styles
+  style(type="text/css")
+    include:scss(outputStyle="compressed") ./styles/inline.scss
+    include:clean-css ./styles/index.css
+
+block content
+  include /includes/modules/preheader.pug
+
+  // CONTAINER TABLE
+  table(width="100%")&attributes(tableAtt)
+    tr
+      td(align="center" style=`background-color: ${white};` bgcolor=white)
+        //  WRAPPER TABLE
+        table(align="center" width=max_w class="mobile-table")&attributes(tableAtt)
+                tr
+                  td(align="center" style=`padding: 35px; background-color: ${white};` bgcolor=white)
+                    table(align="center" width="100%")&attributes(tableAtt)
+                      tr
+                        td
+                          img(src=img_path+"logo-r.png" width="120" height="96")
+                      tr
+                        td(class="f_normal" style=`font-family: ${fallback}; font-size: 12px; line-height: 18px; padding-top: 10px;`)
+                          p(class="f_normal header black" style=`font-family: ${fallback};`).
+                            #{greeting}
+                          p(class="f_normal paragraph black" style=`font-family: ${fallback};`).
+                            !{body}

@@ -1,0 +1,4 @@
+{
+  "greeting": "{{user.firstName}},",
+  "body": "You have an upcoming {{visit.reason}} at <a href='{{provider.url}}'>{{provider.name}}</a> in {{timeLength}}."
+}

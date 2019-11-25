@@ -1,0 +1,4 @@
+{
+  "greeting": "{{user.firstName}},",
+  "body": "<a href='{{actionPlan.url}}'>{{actionPlan.name}}</a> is due {{timeLength}}. Please review."
+}

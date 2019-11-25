@@ -1,0 +1,4 @@
+{
+  "greeting": "{{user.firstName}},",
+  "body": "You’ve been assigned a new task today: <a href='{{actionPlan.url}}'>{{actionPlan.name}}</a>"
+}

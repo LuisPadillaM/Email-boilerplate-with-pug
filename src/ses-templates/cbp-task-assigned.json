@@ -1,0 +1,8 @@
+{
+  "Template": {
+    "TemplateName": "taskAssigned",
+    "SubjectPart": "You have a new task.",
+    "HtmlPart": "",
+    "TextPart": "You’ve been assigned a new task today: {{actionPlan.name}}"
+  }
+}

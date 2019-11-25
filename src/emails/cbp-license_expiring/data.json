@@ -1,0 +1,4 @@
+{
+  "greeting": "{{user.firstName}},",
+  "body": "The <a href='{{provider.url}}'>{{provider.license}}</a> for {{provider.name}} is expiring {{timeLength}}. Please review."
+}

@@ -1,0 +1,50 @@
+extends ../../layout/main.pug
+
+block variables
+  -var max_w = 600
+  -var title = "REVLIMID"
+  -var analytics = "https://www.google-analytics.com/collect?v=1&amp;tid=UA-41110602-1&amp;cid=02254587&amp;t=event&amp;ec=maintenance_efficacy&amp;ea=open&amp;el=open_email&amp;cs=appature&amp;cm=email&amp;cn=open_email_tracking"
+  -var fallback = "Helvetica, Arial, sans-serif"
+  -var logo = hero.logo
+  -var yellowBoxes = body.yellowBoxes
+  -var list = body.list
+  -var maintenance = body.maintenance
+  -var adverse = body.adverse
+  -var secRow = body.secRow
+  -var graphs = body.graphs
+  -var arrow = safety.arrow
+  -var warning = safety.warning
+  -var precautions = safety.precautions
+  -var img_path = "img/"
+block styles
+  style
+    :clean-css
+      @media only screen and (max-width: 479px){
+        .deviceWidth{
+          width:100%!important;
+          padding:0
+        }
+      }
+
+  style(type="text/css" data-premailer="ignore")
+    include:clean-css ./styles/index.css
+
+block content
+
+  // CONTAINER TABLE
+  table(width="100%" style="table-layout: fixed;")&attributes(tableAtt)
+    tr
+      td(align="center")
+        //  WRAPPER TABLE
+        table(width=max_w class="wrapper")&attributes(tableAtt)
+          td
+            include components/hero.pug
+            include components/warning_responsive.pug
+            include components/body.pug
+            include components/safety.pug
+            include components/footer.pug
+
+  //- p="STARTING MIXIN MOBILE"
+  //- +mobile_h_s(true)
+  //-   block show
+  //-     p="showed"

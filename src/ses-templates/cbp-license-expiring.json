@@ -1,0 +1,8 @@
+{
+  "Template": {
+    "TemplateName": "licenseExpiring",
+    "SubjectPart": "License expiring {{timeLength}}.",
+    "HtmlPart": "",
+    "TextPart": "The {{provider.license}} for {{provider.name}} is expiring {{timeLength}}. Please review."
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "hero":{
+    "logo":{
+        "img": "header/header_img_logo.jpg",
+        "url": "http://www.revlimid.com/mm-hcp/?utm_source=appature&utm_medium=email&utm_campaign=maintenance_efficacy&utm_content=rev_logo"
+      }
+  },
+  "warning_h":{
+    "headlines":[
+      "REVLIMID maintenance therapy may extend","PFS for your post auto-HSCT patients"
+      ]
+  },
+  "body": {
+      "yellowBoxes":[
+        "body/REVLIMID_placebo.jpg",
+        "body/OverallSurvival.jpg"
+      ],
+      "list": [
+        "In Study 1 (US), median progression-free survival (PFS) at unblinding<sup style='vertical-align:3px!important;position:relative; color:#004b7e; text-align:left;font-family: Roboto, Helvetica, sans-serif;font-weight: 400;font-size:12px;'>*</sup> was 2.8 years for REVLIMID vs 1.6  years for placebo (HR 0.38; 95% CI 0.27, 0.54; <span style='font-style: italic;'>P</span>&lt;0.001)<sup>1,2</sup>",
+        "In Study 2 (EU), median PFS at unblinding<sup style='vertical-align:3px!important;position:relative; color:#004b7e;text-align:left;font-family: Roboto, Helvetica, sans-serif;font-weight: 400;font-size:12px;'>*</sup> was 3.4 years for REVLIMID vs 1.9 years for placebo (HR 0.50; 95% CI 0.39, 0.64; <span style='font-style: italic;'>P </span>&lt;0.001)<sup>1,2</sup>"
+      ],
+      "graphs":{
+        "title1": "Median PFS<sup style='font-size:11.2px;'>†</sup> at Updated Analysis<sup style='font-size:11.2px;'>‡</sup> for<br> Maintenance Studies 1 and 2<sup style='font-size:11.2px;'>1,2</sup>",
+        "img1": "body/img_pfs_chart.jpg",
+        "img1_mob": "body/img_pfs_chart_mob.jpg",
+        "desc1":[
+          {
+              "text": "Study 1: Unblinded December 2009; Study 2: Unblinded July 2010.",
+              "sym": "<td width='7' valign='top' class='bullet' style='text-align:right;font-size: 14px;padding-right: 0px; vertical-align: 4px; vertical-align: top; font-weight: 400;color:#004b7e;'><sup style='padding-right:1px;'>*</sup></td>"
+          },
+          {
+              "text": "PFS was defined from randomization to the date of progression or death, whichever occurred first.",
+              "sym": "<td width='7' valign='top' class='bullet' style='text-align:right;font-size: 14px;padding-right: 0px; vertical-align: 4px; vertical-align: top; font-weight: 400;color:#004b7e;'><sup>†</sup></td>"
+          },
+          {
+            "text": "Updated analysis conducted in March 2015.",
+            "sym": "<td width='7' valign='top' class='bullet' style='text-align:right;font-size: 14px;padding-right: 0px; vertical-align: 4px; vertical-align: top; font-weight: 400;color:#004b7e;'><sup>‡</sup></td>"
+          }
+        ],
+        "title2": "Median Overall Survival for<br> Maintenance Studies 1 and 2<sup style='font-size:11.2px;'>1,2</sup>",
+        "img2": "body/img_os_chart.jpg",
+        "img2_mob": "body/img_os_chart_mob.jpg",
+        "desc2": "The individual studies were not powered to evaluate OS"
+      },
+
+      "desc": "Descriptive analysis of OS data with a cutoff date of February 1, 2016 is provided above. Median follow-up time was 81.6 and 96.7 months for Maintenance Study 1 and Maintenance Study 2, respectively.",
+      "maintenance":{
+        "title": "Maintenance Studies 1 and 2 evaluated REVLIMID until progression or unacceptable toxicity in >1000 patients post auto-HSCT<sup>1,2</sup>",
+        "paragraphs": [
+          "<span style='font-weight: bold'>Trial Design:</span> Study 1 (US; enrolled patients aged 18-70 years) and Study 2 (EU; enrolled patients aged &lt;65 years) were multicenter, randomized 1:1, double-blind, parallel-group, placebo-controlled studies conducted in newly diagnosed patients who received auto-HSCT after induction therapy within 12 months.",
+          "The primary endpoint for both studies was PFS defined from randomization to the date of progression or death, whichever occurred first. Patients were randomized to REVLIMID or placebo within 90-100 days post-transplant and 90-180 days post-transplant in Studies 1 and 2, respectively. Patients needed at least a stable disease response following hematologic recovery, and must have had CrCl ≥30 mL/min. Patients in the placebo arm of Study 1 were allowed to cross over to receive REVLIMID before disease progression; patients in Study 2 were not recommended to cross over. Please see Prescribing Information for full patient demographics.",
+          "In both studies, starting dose was REVLIMID 10 mg once daily on Days 1-28 of repeated 28-day cycles. If tolerated, dose could be increased to 15 mg once daily after 3 months in the absence of dose-limiting toxicity, and treatment was to be continued until disease progression or patient withdrawal for another reason. Dose was reduced, interrupted, and/or discontinued as needed to manage toxicities. A dose increase to 15 mg once daily occurred in 135 patients (58%) in Maintenance Study 1, and in 185 patients (60%) in Maintenance Study 2."
+          ]
+      },
+      "adverse":{
+        "title": "ADVERSE REACTIONS",
+        "paragraph": "The most frequently reported Grade 3 or 4 reactions in ≥20% (REVLIMID arm) included neutropenia, thrombocytopenia, and leukopenia. The serious adverse reactions of lung infection and neutropenia (more than 4.5%) occurred in the REVLIMID arm. The most frequently reported adverse reactions in ≥20% (REVLIMID arm) across both maintenance studies (Study 1, Study 2) were neutropenia (79%, 61%), thrombocytopenia (72%, 24%), leukopenia (23%, 32%), anemia (21%, 9%), upper respiratory tract infection (27%, 11%), bronchitis (5%, 47%), nasopharyngitis (2%, 35%), cough (10%, 27%), gastroenteritis (0%, 23%), diarrhea (55%, 39%), rash (32%, 8%), fatigue (23%, 11%), asthenia (0%, 30%), muscle spasm (0%, 33%), and pyrexia (8%, 21%)"
+      },
+      "secRow":{
+          "learn":{
+            "img": "body/celgeneLearnMore.jpg",
+            "url": "https://www.celgenepatientsupport.com"
+          }
+      }
+  },
+  "safety":{
+    "arrow":{
+      "img": "body/icon_arrow.jpg",
+      "url": "http://www.revlimid.com/mm-hcp/expanded-indication/?utm_source=appature&utm_medium=email&utm_campaign=maintenance_efficacy&utm_content=post_auto_hsct"
+    },
+    "title1": "Important Safety Information",
+    "warning":{
+      "Mtitle": "WARNING: EMBRYO-FETAL TOXICITY, HEMATOLOGIC TOXICITY, and VENOUS and ARTERIAL THROMBOEMBOLISM",
+      "title1": "Embryo-Fetal Toxicity",
+      "paragraph1": "Do not use REVLIMID during pregnancy. Lenalidomide, a thalidomide analogue, caused limb abnormalities in a developmental monkey study. Thalidomide is a known human teratogen that causes severe life-threatening human birth defects. If lenalidomide is used during pregnancy, it may cause birth defects or embryo-fetal death. In females of reproductive potential, obtain 2 negative pregnancy tests before starting REVLIMID treatment. Females of reproductive potential must use 2 forms of contraception or continuously abstain from heterosexual sex during and for 4 weeks after REVLIMID treatment. To avoid embryo-fetal exposure to lenalidomide, REVLIMID is only available through a restricted distribution program, the REVLIMID REMS<sup>®</sup> program.",
+      "moreInfo": "Information about the REVLIMID REMS<sup>®</sup> program is available at <a href=https://www.celgeneriskmanagement.com/REMSPortal/rems/portal/REMSPortal.portal style='font-size: 14px;color: #004b7e'>www.celgeneriskmanagement.com</a> or by calling the manufacturer’s toll-free number <br><span style=color:#000>1-888-423-5436</span>.",
+      "title2": "Hematologic Toxicity (Neutropenia and Thrombocytopenia)",
+      "paragraph2": "REVLIMID can cause significant neutropenia and thrombocytopenia. Eighty percent of patients with del 5q MDS had to have a dose delay/reduction during the major study. Thirty-four percent of patients had to have a second dose delay/reduction. Grade 3 or 4 hematologic toxicity was seen in 80% of patients enrolled in the study. Patients on therapy for del 5q MDS should have their complete blood counts monitored weekly for the first 8 weeks of therapy and at least monthly thereafter. Patients may require dose interruption and/or reduction. Patients may require use of blood product support and/or growth factors.",
+      "title3": "Venous and Arterial Thromboembolism",
+      "paragraph3": "REVLIMID has demonstrated a significantly increased risk of deep vein thrombosis (DVT) and pulmonary embolism (PE), as well as risk of myocardial infarction and stroke in patients with MM who were treated with REVLIMID and dexamethasone therapy. Monitor for and advise patients about signs and symptoms of thromboembolism. Advise patients to seek immediate medical care if they develop symptoms such as shortness of breath, chest pain, or arm or leg swelling. Thromboprophylaxis is recommended and the choice of regimen should be based on an assessment of the patient’s underlying risks."
+    },
+    "precautions":{
+      "Mtitle": "WARNINGS AND PRECAUTIONS",
+      "paragraphs":[
+          "<span style=font-weight:700;>REVLIMID REMS<sup>®</sup> Program: See Boxed WARNINGS:</span> Prescribers and pharmacies must be certified with the REVLIMID REMS program by enrolling and complying with the REMS requirements; pharmacies must only dispense to patients who are authorized to receive REVLIMID. Patients must sign a Patient-Physician Agreement Form and comply with REMS requirements; female patients of reproductive potential who are not pregnant must comply with the pregnancy testing and contraception requirements and males must comply with contraception requirements",
+          "<span style=font-weight:700;>Hematologic Toxicity:</span> REVLIMID can cause significant neutropenia and thrombocytopenia. Monitor patients with neutropenia for signs of infection. Advise patients to observe for bleeding or bruising, especially with use of concomitant medications that may increase risk of bleeding. <span style=font-weight:bold;text-decoration:underline;>MM</span>: Patients taking REVLIMID/dex or REVLIMID as maintenance therapy should have their complete blood counts (CBC) assessed every 7 days for the first 2 cycles, on days 1 and 15 of cycle 3, and every 28 days thereafter ",
+          "<span style=font-weight:700;>Venous and Arterial Thromboembolism: See Boxed WARNINGS: </span>Venous thromboembolic events (DVT and PE) and arterial thromboses (MI and CVA) are increased in patients treated with REVLIMID. Patients with known risk factors, including prior thrombosis, may be at greater risk and actions should be taken to try to minimize all modifiable factors (e.g., hyperlipidemia, hypertension, smoking). Thromboprophylaxis is recommended and the regimen should be based on patient's underlying risks. ESAs and estrogens may further increase the risk of thrombosis and their use should be based on a benefit-risk decision",
+          "<span style=font-weight:700;>Increased Mortality in Patients with CLL:</span> In a clinical trial in the first-line treatment of patients with CLL, single agent REVLIMID therapy increased the risk of death as compared to single agent chlorambucil. Serious adverse cardiovascular reactions, including atrial fibrillation, myocardial infarction, and cardiac failure, occurred more frequently in the REVLIMID arm. REVLIMID is not indicated and not recommended for use in CLL outside of controlled clinical trials",
+          "<span style=font-weight:700;>Second Primary Malignancies (SPM):</span> In clinical trials in patients with MM receiving REVLIMID, an increase of hematologic plus solid tumor SPM, notably AML and MDS, have been observed. Monitor patients for the development of SPM. Take into account both the potential benefit of REVLIMID and risk of SPM when considering treatment",
+          "<span style=font-weight:700;>Hepatotoxicity:</span> Hepatic failure, including fatal cases, has occurred in patients treated with REVLIMID/dex. Pre-existing viral liver disease, elevated baseline liver enzymes, and concomitant medications may be risk factors. Monitor liver enzymes periodically. Stop REVLIMID upon elevation of liver enzymes. After return to baseline values, treatment at a lower dose may be considered",
+          "<span style=font-weight:700;>Allergic Reactions:</span> Angioedema and serious dermatologic reactions including Stevens-Johnson syndrome (SJS) and toxic epidermal necrolysis (TEN) have been reported. These events can be fatal. Patients with a prior history of Grade 4 rash associated with thalidomide treatment should not receive REVLIMID. REVLIMID interruption or discontinuation should be considered for Grade 2-3 skin rash. REVLIMID must be discontinued for angioedema, Grade 4 rash, exfoliative or bullous rash, or if SJS or TEN is suspected and should not be resumed following discontinuation for these reactions. REVLIMID capsules contain lactose; risk-benefit of treatment should be evaluated in patients with lactose intolerance",
+          "<span style=font-weight:700;>Tumor Lysis Syndrome (TLS):</span> Fatal instances of TLS have been reported during treatment with lenalidomide. The patients at risk of TLS are those with high tumor burden prior to treatment. These patients should be monitored closely and appropriate precautions taken",
+          "<span style=font-weight:700;>Tumor Flare Reaction (TFR):</span> TFR has occurred during investigational use of lenalidomide for CLL and lymphoma. Monitoring and evaluation for TFR is recommended in patients with MCL. Tumor flare may mimic the progression of disease (PD). In patients with Grade 3 or 4 TFR, it is recommended to withhold treatment with REVLIMID until TFR resolves to ≤Grade 1. REVLIMID may be continued in patients with Grade 1 and 2 TFR without interruption or modification, at the physician’s discretion",
+          "<span style=font-weight:700;>Impaired Stem Cell Mobilization:</span> A decrease in the number of CD34+ cells collected after treatment (>4 cycles) with REVLIMID has been reported. Consider early referral to transplant center to optimize timing of the stem cell collection",
+          "<span style=font-weight:700;>Thyroid Disorders:</span> Both hypothyroidism and hyperthyroidism have been reported. Measure thyroid function before start of REVLIMID treatment and during therapy "
+        ]
+    }
+  },
+  "footer":{
+      "paragraphs":[
+      "This e-mail was sent by Celgene Corporation and is intended for U.S. healthcare providers only.",
+      "Celgene Corporation,  <span class=mobile_link>86 Morris Avenue, Summit, New Jersey 07901</span>",
+      "To no longer receive these messages from Celgene about REVLIMID concerning multiple myeloma, <br>please <a href=http://www.celgenesubscriptioncenter.com/contacts/optout/25?key={{contact.email}} target='_blank' style=text-decoration:underline;color:#004b7f;>click here</a> to unsubscribe from this email list."
+      ],
+      "click_link2": "http://www.celgenesubscriptioncenter.com/contacts/subscriptions?key={{contact.email}}",
+      "logo":{
+        "img": "footer/logoFooter.png",
+        "url": "http://www.celgene.com"
+      },
+      "rights1": "REVLIMID<sup>&reg;</sup>, REVLIMID REMS<sup>&reg;</sup>, and Celgene Patient Support<sup>&reg;</sup> are registered trademarks of Celgene Corporation.",
+      "rights2": [
+        "<td class='footer sixty'>© 2017 Celgene Corporation</td>",
+        "<td class='footer sixty'><span class='sixty_s' style='padding-right:25px;'>03/17</span> US-REV170037</td>"
+      ]
+  }
+}

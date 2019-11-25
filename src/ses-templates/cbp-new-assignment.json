@@ -1,0 +1,8 @@
+{
+  "Template": {
+    "TemplateName": "newAssignment",
+    "SubjectPart": "You have a new assignment.",
+    "HtmlPart": "",
+    "TextPart": "You have been assigned to {{provider.name}}"
+  }
+}

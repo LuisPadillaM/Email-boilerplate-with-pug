@@ -1,0 +1,26 @@
+@import "variables.scss";
+
+.white{
+  color: $white;
+}
+
+.black{
+  color: $black;
+}
+
+.f_normal{
+  font-weight: 400;
+}
+
+.f_bold{
+  font-weight: 800;
+}
+
+.header {
+  font-size: 16px;
+}
+
+.paragraph {
+  font-size: 12px;
+  line-height: 1.3;
+}

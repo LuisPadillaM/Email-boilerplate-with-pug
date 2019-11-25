@@ -1,0 +1,8 @@
+{
+  "Template": {
+    "TemplateName": "visitScheduled",
+    "SubjectPart": "Visit scheduled {{timeLength}}.",
+    "HtmlPart": "",
+    "TextPart": "You have an upcoming {{visit.reason}} at {{provider.name}} in {{timeLength}}."
+  }
+}

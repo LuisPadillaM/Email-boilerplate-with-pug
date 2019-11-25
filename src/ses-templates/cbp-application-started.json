@@ -1,0 +1,8 @@
+{
+  "Template": {
+    "TemplateName": "applicationStarted",
+    "SubjectPart": "A new licensing application has been started",
+    "HtmlPart": "",
+    "TextPart": "A new application has been started for {{provider.name}}"
+  }
+}

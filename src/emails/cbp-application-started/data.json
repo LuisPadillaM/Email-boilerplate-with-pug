@@ -1,0 +1,4 @@
+{
+  "greeting": "{{user.firstName}},",
+  "body": "A new application has been started for <a href='{{provider.url}}'>{{provider.name}}</a>"
+}

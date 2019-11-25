@@ -1,0 +1,8 @@
+{
+  "Template": {
+    "TemplateName": "taskDue",
+    "SubjectPart": "Task due {{timeLength}}.",
+    "HtmlPart": "",
+    "TextPart": "{{actionPlan.name}} is due {{timeLength}}. Please review."
+  }
+}
