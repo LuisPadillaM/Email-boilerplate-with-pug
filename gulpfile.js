@@ -20,6 +20,7 @@ function loadTask (module)  {
 }
 
 gulp.task("boilerplate", () => loadTask("boilerplate"));
+gulp.task("awsTemplate", () => loadTask("awsTemplate"));
 
 gulp.task("images", () => loadTask("images"));
 

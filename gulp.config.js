@@ -8,6 +8,7 @@ module.exports = function () {
     this.dest = "./dist/";
     this.index = `.${this.src}index.pug`;
     this.emailSrc = `${this.src}emails/`;
+    this.awsTemplates = `${this.src}aws-templates/`;
     this.pug_w = ["src/layout/*.pug", "src/emails/**/*.pug"];
     this.zipPath = "./dist";
     this.pkg_json = JSON.parse(fs.readFileSync(`${__dirname}/package.json`, "utf8"));
