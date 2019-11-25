@@ -1,3 +1,3 @@
-module.exports =  ({ gulp, $ }) =>  gulp.src("../dist/**/index.html")
+module.exports =  ({gulp, $, config }) =>  gulp.src(`${config.dest}/**/index.html`)
   .pipe($.htmlscape())
-  .pipe(gulp.dest("./escaped/"));
+  .pipe(gulp.dest(`./escaped/`));
